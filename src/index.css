@@ -9,4 +9,5 @@ html {
     margin: 0;
     padding: 0;
     background-color: #FAF9F6;
+    scroll-behavior: smooth;
   }
