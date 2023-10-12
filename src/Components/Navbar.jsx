@@ -5,20 +5,33 @@ import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../Assets/logo.png';
 import {Link} from 'react-scroll';
 import 'animate.css';
+import Globe from '../Assets/Vector_19.png';
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
 
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () => {
+        if(window.scrollY >= 825) {
+        setNavbar(true)
+        } else {
+        setNavbar(false)
+        }
+    }
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <div className='fixed w-full h-[80px] flex justify-center items-center px-4  text-black z-10'>
+    <div className={navbar ? 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 bg-black text-white animate__animated animate__fadeIn' : 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 animate__animated animate__fadeIn'}>
         <div className='animate__animated animate__fadeIn flex justify-start pr-32'>
             <p className='font-semibold italic font-roboto text-sm hover:bg-[#F15946] '>Deon Davis&#169;</p>
         </div>
     
         {/* menu */}
             <ul className='hidden md:flex justify-center items-center animate__animated animate__fadeIn font-darker'>
-                <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
+                <li className=' hover:bg-[#F15946] cursor-pointer px-2 '>
                 <Link to='home' smooth={true} duration={500}>Home</Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
@@ -30,15 +43,15 @@ const Navbar = () => {
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Link to='work' smooth={true} duration={500} offset={-50} >Work</Link> 
                 </li>
-                <li className=' hover:bg-[#F15946] hover:underline font- cursor-pointer px-2'>
+                <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Link to='contact' smooth={true} duration={500}>Contact</Link> 
                 </li>
             </ul>
         
 
         {/* Hamburger */}
-        <div onClick={handleClick} className="md:hidden z-10">
-            {!nav ? <FaBars /> : <FaTimes />}
+        <div onClick={handleClick} className=" ml-10 z-10">
+            {!nav ? <a href='javascript:void(0)'><img src={Globe} className={navbar ? 'h-8 w-8 hover:animate-spin border-[1px] rounded-full bg-[#F15946]' : 'h-8 w-8 hover:animate-spin'} /></a> : <FaTimes className='text-white h-8 w-8' />}
         </div>
 
 
