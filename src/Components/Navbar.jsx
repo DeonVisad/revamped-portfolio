@@ -32,16 +32,13 @@ const Navbar = () => {
         {/* menu */}
             <ul className='hidden md:flex justify-center items-center animate__animated animate__fadeIn font-darker'>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2 '>
-                <Link to='home' smooth={true} duration={500}>Home</Link> 
+                <Link to='home' smooth={true} duration={500}>Index</Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='about' smooth={true} duration={500}>About</Link> 
+                <Link to='work' smooth={true} duration={500}>Work</Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='skills' smooth={true} duration={500}>Skills</Link> 
-                </li>
-                <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='work' smooth={true} duration={500} offset={-50} >Work</Link> 
+                <Link to='skills' smooth={true} duration={500}>Resume</Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Link to='contact' smooth={true} duration={500}>Contact</Link> 

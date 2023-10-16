@@ -12,6 +12,7 @@ module.exports = {
         'darker': ['Darker Grotesque', 'sans-serif'],
         'roboto': ['Roboto Mono', 'monospace'],
         'playfair': ['Playfair Display', 'serif'],
+        'open' : ['Open Sans', 'sans-serif'],
       },
     },
   },
