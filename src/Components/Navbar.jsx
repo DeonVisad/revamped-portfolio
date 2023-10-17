@@ -38,10 +38,10 @@ const Navbar = () => {
                 <Link to='work' smooth={true} duration={500}>Work</Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='skills' smooth={true} duration={500}>Resume</Link> 
+                <a href="https://resume.io/r/XxFFYKyYO" target='_blank' rel='noreferrer' >Resume</a> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='contact' smooth={true} duration={500}>Contact</Link> 
+                <a href='mailto:deondavisdev@gmail.com'>Contact</a> 
                 </li>
             </ul>
         
