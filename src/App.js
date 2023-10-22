@@ -1,5 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+
 import Home from './Pages/Home/Home';
 import Navbar from './Components/Navbar';
 import Work from './Pages/Work/Work';
@@ -11,15 +14,20 @@ import Socials from './Components/Socials';
 
 
 function App() {
+  const location = useLocation();
   return (
     <div className='overflow-x-hidden'>
       <Socials />
       <PlayMusic />
       <ScrollTop />
       <Navbar />
+      <AnimatePresence mode='wait'>
+        <Routes location={location} key={location.pathname}>
+          <Route index element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </AnimatePresence>
       
-      <Home />
-      <Work />
     </div>
   );
 }

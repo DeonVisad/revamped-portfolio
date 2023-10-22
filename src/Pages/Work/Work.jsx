@@ -16,7 +16,7 @@ const Work = () => {
   const [appear, setAppear] = useState(false);
 
   const changeBackground = () => {
-      if(window.scrollY >= 75) {
+      if(window.scrollY >= 10) {
       setAppear(true)
       } else {
       setAppear(false)

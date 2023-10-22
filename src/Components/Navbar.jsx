@@ -4,6 +4,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../Assets/logo.png';
 import {Link} from 'react-scroll';
+import {Link as Nav} from 'react-router-dom'
 import 'animate.css';
 import Globe from '../Assets/Vector_19.png';
 
@@ -32,10 +33,13 @@ const Navbar = () => {
         {/* menu */}
             <ul className='hidden md:flex justify-center items-center animate__animated animate__fadeIn font-darker'>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2 '>
-                <Link to='home' smooth={true} duration={500}>Index</Link> 
+                <Nav to='/' smooth={true} duration={500}>Index</Nav> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Link to='work' smooth={true} duration={500}>Work</Link> 
+                </li>
+                <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
+                <Nav to='/about' smooth={true} duration={500}>About Me</Nav> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <a href="https://resume.io/r/XxFFYKyYO" target='_blank' rel='noreferrer' >Resume</a> 

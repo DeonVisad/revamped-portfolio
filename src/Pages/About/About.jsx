@@ -1,8 +1,11 @@
 import React from 'react';
+import transition from '../../transition';
+import AnimatedCursor from 'react-animated-cursor';
 
 const About = () => {
   return (
-    <div name='about' className='w-full bg-[#adb5bd] text-black'>
+    <div name='about' className='flex w-full h-[100svh] bg-[#adb5bd] text-black'>
+        <AnimatedCursor outerStyle={{mixBlendMode: 'difference'}} />
         <div className='flex flex-col justify-center items-center w-full p-3'>
             <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8'>
                 <div></div>
@@ -23,4 +26,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default transition(About);

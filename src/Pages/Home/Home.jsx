@@ -2,7 +2,9 @@ import React from 'react';
 import 'animate.css';
 import {Link} from 'react-scroll';
 import AnimatedCursor from "react-animated-cursor";
+import transition from '../../transition';
 
+import Work from '../Work/Work';
 import globe from '../../Assets/Vector_30.png';
 
 
@@ -11,7 +13,8 @@ const Home = () => {
 
 
   return (
-    <div id='page' name='home' className='relative w-[100vw] h-[100svh] bg-[#ced4da] border-b-[1px] border-zinc-500 overflow-x-hidden'>
+    <div id='page' name='home' className='flex flex-col'>
+        <div className='relative w-[100vw] h-[100svh] bg-[#ced4da] border-b-[1px] border-zinc-500 overflow-x-hidden'>
       
       
         <AnimatedCursor outerStyle={{mixBlendMode: 'difference'}} />
@@ -32,11 +35,14 @@ const Home = () => {
             
         </div>
         <div className='flex w-full justify-start items-end h-full py-16 px-32 animate__animated animate__fadeIn '>
-                    <a href='mailto:deondavisdev@gmail.com'><p className='uppercase font-roboto text-xs text-[#F15946] '>Contact me <br />deondavisdev@gmail.com</p></a> 
-                          
-                    </div>
+            <a href='mailto:deondavisdev@gmail.com'>
+              <p className='uppercase font-roboto text-xs text-[#F15946] '>Contact me <br />deondavisdev@gmail.com</p>
+            </a>                   
+        </div>
+        </div>
+        <Work />
     </div>
   )
 }
 
-export default Home
+export default transition(Home);
