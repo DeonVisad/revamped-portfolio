@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa';
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
@@ -12,6 +12,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
 
+
     const [navbar, setNavbar] = useState(false);
 
     const changeBackground = () => {
@@ -24,8 +25,10 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeBackground);
 
+
+
   return (
-    <div className={navbar ? 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 bg-black text-white animate__animated animate__fadeIn' : 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 animate__animated animate__fadeIn'}>
+    <div className={navbar ? 'fixed w-full h-[80px] flex justify-center items-center px-4 z-10 bg-black text-white animate__animated animate__fadeIn' : 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 animate__animated animate__fadeIn'}>
         <div className='animate__animated animate__fadeIn flex justify-start pr-32'>
             <p className='font-semibold italic font-roboto text-sm hover:bg-[#F15946] '>Deon Davis&#169;</p>
         </div>
@@ -33,10 +36,10 @@ const Navbar = () => {
         {/* menu */}
             <ul className='hidden md:flex justify-center items-center animate__animated animate__fadeIn font-darker'>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2 '>
-                <Nav to='/' smooth={true} duration={500}>Index</Nav> 
+                <Link to='/' smooth={true} duration={500}><Nav to='' >Index</Nav></Link>
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='work' smooth={true} duration={500}>Work</Link> 
+                <Link to='work' smooth={true} duration={500}><Nav to='/'>Work</Nav></Link> 
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Nav to='/about' smooth={true} duration={500}>About Me</Nav> 
@@ -52,17 +55,15 @@ const Navbar = () => {
 
         {/* Hamburger */}
         <div onClick={handleClick} className=" ml-10 z-10">
-            {!nav ? <a href='javascript:void(0)'><img src={Globe} className={navbar ? 'h-8 w-8 hover:animate-spin border-[1px] rounded-full bg-[#F15946]' : 'h-8 w-8 hover:animate-spin'} /></a> : <FaTimes className='text-white h-8 w-8' />}
+            {!nav ? <a href='javascript:void(0)'><img src={Globe} className={navbar ? 'h-8 w-8 hover:animate-spin border-[1px] rounded-full bg-[#F15946]' : 'h-8 w-8 hover:animate-spin'} /></a> : <FaTimes className='text-[#F15946] h-8 w-8' />}
         </div>
 
 
         {/* Mobile menu */}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#002029] flex flex-col justify-center items-center'}>
-            <li className='py-6 text-4xl cursor-pointer'><Link onClick={handleClick} to='home' smooth={true} duration={500}>Home</Link> </li>
-            <li className='py-6 text-4xl cursor-pointer'><Link onClick={handleClick} to='about' smooth={true} duration={500}>About</Link> </li>
-            <li className='py-6 text-4xl cursor-pointer'><Link onClick={handleClick} to='skills' smooth={true} duration={500}>Skills</Link></li>
-            <li className='py-6 text-4xl cursor-pointer'><Link onClick={handleClick} to='work' smooth={true} duration={500}>Work</Link></li>
-            <li className='py-6 text-4xl cursor-pointer'><Link onClick={handleClick} to='contact' smooth={true} duration={500}>Contact</Link></li>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 right-0 w-1/3 h-screen bg-black/95 flex flex-col justify-center items-center animate__animated animate__slideInRight text-white/75 font-darker '}>
+            <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><Link onClick={handleClick} to='home' smooth={true} duration={500}>Home</Link> </li>
+            <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><Nav onClick={handleClick} to='/about'>About</Nav> </li>
+            <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><a onClick={handleClick} href='mailto:deondavisdev@gmail.com' target='_blank' rel='noreferrer'>Contact</a></li>
         </ul>
         
 
