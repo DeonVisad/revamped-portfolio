@@ -16,7 +16,7 @@ import Socials from './Components/Socials';
 function App() {
   const location = useLocation();
   return (
-    <div className='overflow-x-hidden'>
+    <div className='overflow-x-hidden overflow-y-hidden'>
       <Socials />
       <PlayMusic />
       <ScrollTop />

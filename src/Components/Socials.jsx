@@ -4,8 +4,8 @@ import {AiFillLinkedin, AiFillGithub, AiFillMail} from 'react-icons/ai';
 
 const Socials = () => {
   return (
-    <div className='relative z-[9] md:flex font-open text-2xl uppercase hidden animate__animated animate__fadeInRight '>
-        <div className='flex items-center h-[50svh] fixed top-48 -right-24 -rotate-90   '>
+    <div className='relative z-[9] w-full md:flex font-open text-2xl uppercase hidden animate__animated animate__fadeInRight '>
+        <div className='flex items-center h-[50svh] fixed top-48 -right-24 -rotate-90 '>
             <div className='px-2 flex items-center text-[#F15946]/25 hover:text-[#F15946]'>
                 <a className='flex items-center' href='https://www.linkedin.com/in/deon-davis-/' rel='noreferrer' target='_blank'>
                 <AiFillLinkedin />

@@ -1,8 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Logo from '../Assets/logo.png';
+import React, {useState} from 'react';
+import {FaTimes} from 'react-icons/fa';
 import {Link} from 'react-scroll';
 import {Link as Nav} from 'react-router-dom'
 import 'animate.css';
@@ -30,16 +27,13 @@ const Navbar = () => {
   return (
     <div className={navbar ? 'fixed w-full h-[80px] flex justify-center items-center px-4 z-10 bg-black text-white animate__animated animate__fadeIn' : 'fixed w-full h-[80px] flex justify-center items-center px-4 text-black z-10 animate__animated animate__fadeIn'}>
         <div className='animate__animated animate__fadeIn flex justify-start pr-32'>
-            <p className='font-semibold italic font-roboto text-sm hover:bg-[#F15946] '>Deon Davis&#169;</p>
+            <Nav to='/'><p className='font-semibold italic font-roboto text-sm hover:bg-[#F15946] '>Deon Davis &#169;</p></Nav>
         </div>
     
         {/* menu */}
             <ul className='hidden md:flex justify-center items-center animate__animated animate__fadeIn font-darker'>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2 '>
-                <Link to='/' smooth={true} duration={500}><Nav to='' >Index</Nav></Link>
-                </li>
-                <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
-                <Link to='work' smooth={true} duration={500}><Nav to='/'>Work</Nav></Link> 
+                <Nav to='/' >Index</Nav>
                 </li>
                 <li className=' hover:bg-[#F15946] cursor-pointer px-2'>
                 <Nav to='/about' smooth={true} duration={500}>About Me</Nav> 

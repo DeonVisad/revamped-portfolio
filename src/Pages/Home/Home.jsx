@@ -5,6 +5,7 @@ import AnimatedCursor from "react-animated-cursor";
 import transition from '../../transition';
 
 
+
 import Work from '../Work/Work';
 import globe from '../../Assets/Vector_30.png';
 
@@ -14,8 +15,8 @@ const Home = () => {
 
 
   return (
-    <div id='page' name='home' className='flex flex-col'>
-        <div className='relative w-[100vw] h-[100svh] bg-[#ced4da] border-b-[1px] border-zinc-500 overflow-x-hidden'>
+    <div id='page' name='home' className='flex flex-col w-full overflow-y-hidden'>
+        <div className='relative w-full h-[100svh] bg-[#ced4da] border-b-[1px] border-zinc-500'>
       
       
         <AnimatedCursor outerStyle={{mixBlendMode: 'difference'}} trailingSpeed={2} />
@@ -27,9 +28,13 @@ const Home = () => {
               <div className='border-r-[1px] border-[#F15946] pr-2'>
                 <a href="javascript:void(0)"><h1 className='text-black font-darker font-bold text-start italic text-4xl animate__animated animate__fadeInLeft '>A Frontend Specialist</h1></a>
                 <h2 className= 'text-sm font-roboto text-start text-black animate__animated animate__fadeInLeft'>If life is good. <br />Help make it that way for others too. </h2>
+                <Link to='work' smooth={true} duration={500}><p className='font-darker underline font-bold text-sm text-start text-[#F15946]'>Check out my work below!</p></Link>
               </div>
               <a href="javascript:void(0)"><img src={globe} className='w-24 h-24 animate__animated animate__fadeInRight hover:bg-[#F15946]' /></a>
             </div>
+            {/* <div className='flex'>
+              <button className='text-start px-3 flex items-center m-2 bg-[#F15946]'>Work <BiSolidChevronDownCircle className='ml-2' /></button>
+            </div> */}
                     
                   
             
