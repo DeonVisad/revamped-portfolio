@@ -28,7 +28,7 @@ const Home = () => {
               <div className='border-r-[1px] border-[#F15946] pr-2'>
                 <a href="javascript:void(0)"><h1 className='text-black font-darker font-bold text-start italic text-4xl animate__animated animate__fadeInLeft '>A Frontend Specialist</h1></a>
                 <h2 className= 'text-sm font-roboto text-start text-black animate__animated animate__fadeInLeft'>If life is good. <br />Help make it that way for others too. </h2>
-                <Link to='work' smooth={true} duration={500}><p className='font-darker underline font-bold text-sm text-start text-[#F15946]'>Check out my work below!</p></Link>
+                <p className='font-darker font-bold text-sm text-start text-[#F15946]'>Scroll down to view my work</p>
               </div>
               <a href="javascript:void(0)"><img src={globe} className='w-24 h-24 animate__animated animate__fadeInRight hover:bg-[#F15946]' /></a>
             </div>

@@ -63,7 +63,7 @@ window.addEventListener('scroll', changeBackground);
               <h3 className='font-roboto text-md text-start py-4'>Project, Frontend Development</h3>
               <p className='font-roboto text-sm text-start py-6 md:w-1/2'> A fully responsive portfolio site built implementing Javascript, React, Tailwind, & React-Scroll. It includes project cards, animations, complete responsiveness, and contact form submission.</p>
               <div className='flex md:w-1/2 justify-start my-3 md:my-0'>
-                <a target='_blank' rel='noreferrer'><button className='bg-black text-white hover:text-black hover:bg-[#F15946] rounded-full text-sm font-roboto py-2 px-5 mr-4'>Live Site</button></a>
+                <a href='https://portfolio-template-deon.netlify.app' target='_blank' rel='noreferrer'><button className='bg-black text-white hover:text-black hover:bg-[#F15946] rounded-full text-sm font-roboto py-2 px-5 mr-4'>Live Site</button></a>
                 <a href='https://github.com/DeonVisad/Portfolio/tree/master' target='_blank' rel='noreferrer'><button className='rounded-full border-black border-[1px] hvr-shutter-out-horizontal text-sm font-roboto py-2 px-5'>Code</button></a>
               </div>
               <div className='flex justify-start my-4'>
