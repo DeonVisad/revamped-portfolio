@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         <ul className={!nav ? 'hidden' : 'absolute top-0 right-0 w-1/3 h-screen bg-black/95 flex flex-col justify-center items-center animate__animated animate__slideInRight text-white/75 font-darker '}>
-            <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><Link onClick={handleClick} to='home' smooth={true} duration={500}>Home</Link> </li>
+            <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><Link onClick={handleClick} to='/' smooth={true} duration={500}>Home</Link> </li>
             <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><Nav onClick={handleClick} to='/about'>About</Nav> </li>
             <li className='py-6 md:text-4xl  text-2xl  hover:text-white'><a onClick={handleClick} href='mailto:deondavisdev@gmail.com' target='_blank' rel='noreferrer'>Contact</a></li>
         </ul>
