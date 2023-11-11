@@ -14,11 +14,11 @@ const About = () => {
   return (
     <div name='about' className='flex w-full text-black'>
         <AnimatedCursor outerStyle={{mixBlendMode: 'difference'}} />
-        <div className='flex flex-col justify-center items-center w-full md:h-screen py-20 md:py-0 bg-[#adb5bd] p-3'>
+        <div className='flex flex-col justify-center items-center w-full md:h-screen py-20 md:py-0 bg-[#002029] p-3'>
             <div className='max-w-[1000px] w-full grid grid-cols-2 gap-8 '>
                 <h1 className='font-darker font-bold md:text-lg text-[#F15946]'>1. About Me</h1>
             </div>
-            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 pb-8 border-b-[1px] border-zinc-500' >
+            <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 pb-8 border-b-[1px] border-zinc-500 text-white' >
                 <div className='sm:text-right text-4xl font-bold font-darker animate__animated animate__fadeInLeft'>
                     <p>Hi, I'm Deon! It's a pleasure to meet you. I hope you enjoy your day!</p>
                 </div>
